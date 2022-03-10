@@ -1,0 +1,156 @@
+#hero{
+    height: 70vh;
+    width: 60%;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 20px;
+    position: relative;
+}
+.leftHero{
+    z-index: 1;
+}
+.heroTitle{
+    font-size: 5rem;
+}
+.heroDesc{
+    width: 25rem;
+}
+.heroButton{
+    margin-top: 1rem;
+}
+.rightHero{
+    z-index: 0;
+}
+.hero3Img{
+    height: 25rem;
+    width: 50rem;
+    margin-left: -20%;
+}
+.hero1Img{
+    position: absolute;
+    height: 10rem;
+    width: 20rem;
+    top: 20%;
+    left: 45%;
+}
+.hero2Img{
+    position: absolute;
+    height: 10rem;
+    width: 20rem;
+    top: 20%;
+    left: 28%;
+}
+.hero4Img{
+    position: absolute;
+    height: 20rem;
+    width: 30rem;
+    top: 40%;
+    left: 50%;
+    z-index: -1;
+}
+@media(max-width:1700px){
+    #hero{
+        width: 80vw;
+    }
+}
+@media(max-width:1350px){
+    #hero{
+        width: 98vw;
+    }
+}
+@media(max-width:900px){
+    .hero3Img{
+        position: absolute;
+        top: 30%;
+        left: 60%;
+        height: 15rem;
+        width: 35rem;
+        margin-left: -30%;
+    }
+    .hero1Img{
+        height: 7rem;
+        width: 15rem;
+        top: 30%;
+        left: 50%;
+    }
+    .hero2Img{
+        height: 7rem;
+        width: 15rem;
+        top: 31%;
+        left: 34%;
+    }
+    .hero4Img{
+        height: 10rem;
+        width: 20rem;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+    }
+}
+@media(max-width:800px){
+    #hero{
+        margin-left: 8rem;
+    }
+    .hero3Img{
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        height: 15rem;
+        width: 35rem;
+        margin-left: -30%;
+    }
+    .hero1Img{
+        height: 7rem;
+        width: 15rem;
+        top: 30%;
+        left: 20%;
+    }
+    .hero2Img{
+        height: 7rem;
+        width: 15rem;
+        top: 31%;
+        left: 1%;
+    }
+    .hero4Img{
+        height: 10rem;
+        width: 20rem;
+        top: 50%;
+        left: 30%;
+        z-index: -1;
+    }
+    .heroButton{
+        margin-top: 10rem;
+    }
+}
+@media(max-width:450px){
+    #hero{
+        margin: 0;
+        width: 100vw;
+    }
+    .heroTitle{
+        font-size: 3rem;
+    }
+    .heroDesc{
+        width: 20rem;
+    }
+    .leftHero{
+        margin-top: 10rem;
+    }
+    .heroButton{
+        margin-top: 5rem;
+    }
+    .hero3Img{
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        height: 10rem;
+        width: 25rem;
+        margin-left: -30%;
+    }
+    .hero1Img{
+        left: 40%;
+    }
+}

@@ -1,0 +1,18 @@
+.Portfolio{
+    overflow-x: hidden;
+}
+.copy{
+    margin: 0 0 10px 10px;
+    font-size: .9rem;
+    color: rgb(245, 245, 245, .5);
+}
+.goUp{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 2rem;
+    display: none;
+}
+.hideUp{
+    display: flex;
+}

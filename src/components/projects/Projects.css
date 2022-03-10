@@ -1,0 +1,79 @@
+#projects{
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+.pTitle{
+    position: relative;
+}
+.pTitle::after{
+    content: '';
+    position: absolute;
+    height: 8px;
+    border-radius: 30px;
+    width: 4rem;
+    background: #000;
+    top: 90%;
+    left: 0;
+    background: linear-gradient(to right, rgb(247, 37, 133, .5), rgb(90, 24, 154, .5) 60%);
+}
+.projectsContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 2rem;
+}
+.pCard{
+    height: 15rem;
+    width: 33rem;
+    display: flex;
+    box-shadow: 9px 14px 27px 2px #000000;
+    background: #000;
+    border-radius: 30px;
+    background: linear-gradient(to right, rgb(247, 37, 133, .5), rgb(90, 24, 154, .5) 60%);
+}
+.projectImg{
+    height: 15rem;
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    flex: 1;
+}
+.pCRight{
+    flex: 1;
+    padding: 10px;
+}
+.pCDesc{
+    padding-top: 20px;
+    font-size: .8rem;
+}
+.pBSpace{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+.pBbuton{
+    height: 2rem;
+    width: 6rem;
+}
+@media(max-width:600px){
+    #projects{
+        width: 95vw;
+    }
+    .pCard{
+        flex-direction: column;
+        width: 30rem;
+        height: auto;
+        border-top-right-radius: 50px;
+    }
+    .projectImg{
+        border-top-left-radius: 0;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+}
