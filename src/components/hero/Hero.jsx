@@ -5,6 +5,7 @@ import Hero3 from '../images/hero3.png'
 import Hero1 from '../images/hero1.png'
 import Hero2 from '../images/hero2.png'
 import Hero4 from '../images/hero4.png'
+
 export default function Header() {
 
   return (
@@ -20,8 +21,6 @@ export default function Header() {
             ]}
           />
       </h1>
-      <p className="heroDesc">
-
         <p>I`m Sebastian Pavel, i am a {" "}
         <Typical 
             loop={Infinity}
@@ -39,43 +38,57 @@ export default function Header() {
               3000,
             ]}
           />
-          </p>
+          <br />
         <br></br>
         <Typical 
             loop={Infinity}
             wrapper="b"
             steps={[
-              'This is my portfolio',
+              'This is my portfolio.',
               5000,
-              'This is my personal website',
+              'This is my personal website.',
               5000
             ]}
           />
-          , it`s purpose is to let 
-        you {' '}
+          <br />
+          If you have the  
+        {' '}
         <Typical 
             loop={Infinity}
             wrapper="b"
             steps={[
-              'explore',
+              'ideea/',
               3000,
-              'check',
+              '/design/',
               3000,
-              'view',
-              3000,
-              'modify',
+              '/template',
               3000
             ]}
           />
-        {' '} my projects and also whatever else i did and know.
+        {' '} i can make it work!
       </p>
-      <button className="heroButton">Cchaaaa</button>
+      <a href="#contact"><button className="heroButton">
+				<Typical 
+            loop={Infinity}
+            wrapper="b"
+            steps={[
+              'Ccchaaa',
+              5000,
+							'Contact me',
+							5000,
+							'Call me',
+							5000,
+							'Email me',
+							5000
+            ]}
+          />	
+			</button></a>
       </div>
       <div className="rightHero">
-            <img src={Hero3} alt="Hero image" className='hero3Img' /> 
-            <img src={Hero1} alt="Hero image" className='hero1Img' />
-            <img src={Hero2} alt="Hero image" className='hero2Img' />
-            <img src={Hero4} alt="Hero image" className='hero4Img' />
+            <img src={Hero3} alt="Hero image" className='hero3Img heroImg' /> 
+            <img src={Hero1} alt="Hero image" className='hero1Img heroImg' />
+            <img src={Hero2} alt="Hero image" className='hero2Img heroImg' />
+            <img src={Hero4} alt="Hero image" className='hero4Img heroImg' />
       </div>
     </section>
   )

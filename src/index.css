@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: whitesmoke;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
@@ -15,6 +15,7 @@
 }
 body{
   background: #001D3D;
+  color: black;
 }
 button{
   height: 3rem;
@@ -28,6 +29,7 @@ button{
   cursor: pointer;
   transition: all .5s ease-in-out;
   box-shadow: 1px 12px 27px 2px #000000;
+  color: whitesmoke;
 }
 button:hover{
   transform: scale(1.05);

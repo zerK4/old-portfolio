@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Footer.css'
-
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 export default function Header() {
+
+const form = useRef()
+
+let navigate = useNavigate()
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_ges0jdw', 'template_b7eegmg', form.current, '0FyAllc4zlo16DmN-')
+    .then((result) => {
+        console.log(result.text);
+        toast.dark(' 🚀 Success! Your email was sent!', {type: "dark"})
+    }, (error) => {
+        console.log(error.text);
+        toast.dark(" 😱 Something wrong happened, please try again in few minutes!")
+    });
+};
+
   return (
     <div id="contact">
       <h1 className="contactTitle">Contact</h1>
@@ -11,25 +31,35 @@ export default function Header() {
             <div className="cEContainer"><a href="mailto:sebastian.v.pavel@gmail.com">Email me!</a></div>
           </div>
           <div className="contactForm">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="formLeft">
               <div className="formContainer">
-                <label>Name</label>
-                <input type="text" placeholder='Please enter name'/>
+              <label className="custom-field">
+                <input type="text" autoComplete="off" required name='name'/>
+                <span className="placeholder">Enter Name</span>
+              </label>
               </div>
               <div className="formContainer">
-                <label>Email</label>
-                <input type="text" placeholder='Please enter email'/>
+              <label className="custom-field">
+                <input type="text" autoComplete="off" required name='email'/>
+                <span className="placeholder">Enter Email</span>
+              </label>
               </div>
               <div className="formContainer">
-                <label>Phone number</label>
-                <input type="text" placeholder='Please enter phone'/>
+              <label className="custom-field">
+                <input type="text" autoComplete="off" required name='phone'/>
+                <span className="placeholder">Enter Phone</span>
+              </label>
               </div>
               </div>
               <div className="formRight">
               <div className="formContainer">
-                <label>Message</label>
-                <textarea placeholder='Please enter yor message'></textarea>
+              <div className="formContainer">
+              <label className="custom-field">
+                <textarea required name='message'/>
+                <span className="placeholder">Type your messasge</span>
+              </label>
+              </div>
               </div>
               <button className="sendMessage">Send</button>
               </div>

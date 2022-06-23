@@ -1,0 +1,28 @@
+.Pokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.Poke{
+    width: 90%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.pokemonImg{
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+.pokeTop{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.pokeName{
+	margin-bottom: 1rem;
+	font-weight: bold;
+}

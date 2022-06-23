@@ -6,6 +6,7 @@
 }
 .techTitle{
     position: absolute;
+    color: whitesmoke;
 }
 .techTitle::after{
     content: '';
@@ -34,6 +35,10 @@
 }
 .fRow{
     display: flex;
+    flex-wrap: wrap;
+}
+.fiRow{
+	display: flex;
 }
 .tIcon{
     height: 7rem;
@@ -59,16 +64,8 @@
     left: -5px;
     border-radius: 15px;
     z-index: 99;
-
+    color: whitesmoke;
 }
-/* .jsSpan::before{
-    content: '◂';
-    color: rgb(247, 37, 133, .5);
-    font-size: 3rem;
-    position: absolute;
-    left: -25%;
-    top: -37%;
-} */
 .js:hover .jsSpan{
     display: flex;
     transition: .5s;
@@ -86,6 +83,6 @@
     }
     .fRow{
         flex-wrap: wrap;
-        width: 90vw;
+        min-width: 90vw;
     }
 }

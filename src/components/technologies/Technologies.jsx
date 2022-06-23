@@ -13,6 +13,10 @@ import RouterG from '../images/icons/routerG.png'
 import ChakraG from '../images/icons/chakraG.png'
 import ReactG from '../images/icons/reactG.png'
 import StyleG from '../images/icons/styleG.png'
+import Apollo from '../images/icons/apollo.png'
+import Graphql from '../images/icons/graphql.png'
+import Vite from '../images/icons/vite.png'
+import Firebase from '../images/icons/firebase.png'
 
 export default function Header() {
   return (
@@ -38,9 +42,13 @@ export default function Header() {
         <div className="js"><img src={Figma} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">Figma</span></div>
         <div className="js"><img src={RouterG} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">Router</span></div>
         <div className="js"><img src={SpringG} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">Spring</span></div>
+        <div className="js"><img src={Apollo} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">Apollo</span></div>
+        <div className="js"><img src={Graphql} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">GraphQL</span></div>
         </div>
         <div className="fiRow">
         <div className="js"><img src={StyleG} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">R-Style</span></div>
+        <div className="js"><img src={Vite} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">Vite</span></div>
+        <div className="js"><img src={Firebase} alt="icon" className='tIcon jsIcon' /><span className="jsSpan">Firebase</span></div>
         </div>
       </div>
     </div>

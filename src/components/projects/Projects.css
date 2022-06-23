@@ -6,6 +6,7 @@
 }
 .pTitle{
     position: relative;
+    color: whitesmoke;
 }
 .pTitle::after{
     content: '';
@@ -24,17 +25,24 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding-top: 5rem;
     gap: 2rem;
+    
+}
+.pCTitle , .pCDesc, .techName{
+    color: whitesmoke;
 }
 .pCard{
-    height: 15rem;
-    width: 33rem;
+    height: auto;
+    width: 50rem;
     display: flex;
+    flex-wrap: wrap;
     box-shadow: 9px 14px 27px 2px #000000;
     background: #000;
     border-radius: 30px;
     background: linear-gradient(to right, rgb(247, 37, 133, .5), rgb(90, 24, 154, .5) 60%);
+    
 }
 .projectImg{
     height: 15rem;
@@ -43,31 +51,108 @@
     border-bottom-left-radius: 30px;
     flex: 1;
 }
+.pLeft{
+    flex: 1;
+    padding: 20px;
+    height: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-height: 20rem;
+		min-width: 15rem;
+        
+}
+.shopLeft{
+	overflow: hidden;
+	margin-left: -2rem;
+}
+.restaurant{
+	overflow: hidden;
+}
+.restaurantImg{
+	height: 20rem;
+}
+.movieClone{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.pLeft::-webkit-scrollbar {
+    width: 10px;
+    height: 10rem;
+}
+.pLeft::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .1);
+}
+.pLeft::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
 .pCRight{
     flex: 1;
     padding: 10px;
+		position: relative;
 }
 .pCDesc{
     padding-top: 20px;
     font-size: .8rem;
+		max-width: 80%;
+}   
+.techName{
+    margin-bottom: 1.2rem;
+}
+.techUsed{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+.techs{
+    display: flex;
+		margin-bottom: 2rem;
+		flex-wrap: wrap;
+    justify-content: space-between;
+		max-width: 20rem;
+}
+.techIcon{
+    height: 5rem;
+    width: 5rem;
+		transition: all .2s ease-in;
+}
+.techIcon:hover{
+	transform: scale(1.1);
 }
 .pBSpace{
-    width: 100%;
+    width: 80%;
     display: flex;
     margin-top: 1rem;
     justify-content: space-between;
+    bottom: 5%;
+    right: 0;
+		left: 5%;
+		position: absolute;
 }
+
 .pBbuton{
     height: 2rem;
     width: 6rem;
+}
+@media(max-width: 1200px){
+	#projects{
+		width: 90vw;
+	}
 }
 @media(max-width:600px){
     #projects{
         width: 95vw;
     }
+	.pLeft{
+		max-width: 40rem;
+	}
     .pCard{
         flex-direction: column;
-        width: 30rem;
+        width: 98vw;
         height: auto;
         border-top-right-radius: 50px;
     }

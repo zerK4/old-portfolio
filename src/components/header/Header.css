@@ -30,21 +30,40 @@ nav{
 }
 .link{
     position: relative;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .link::before{
-    content: '';
     position: absolute;
-    top: 100%;
+    content: '';
     height: 5px;
-    border-radius: 30px;
-    width: 1rem;
-    transition: all .3s ease-in-out;
     background: linear-gradient(to right, rgb(247, 37, 133, .5), rgb(90, 24, 154, .5) 60%);
+    width: 10px;
+    top: 90%;
+    border-radius: 30px;
+    transition: all 1.5s cubic-bezier(0.19, 1.5, 0.22, 1);
 }
 .link:hover::before{
-    width: 100%;
-
+    width: 5px;
+    transform: translateX(-150%) rotate(360deg);
+    background: red;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 10%;
+    background: aqua;
+    top: 90%;
+    left: 0;
+    transition: all 1.5s cubic-bezier(.5, 1.5, 0.2, 1);
+    transform: translateX(500%);
+    visibility: hidden;
+    border-radius: 10px;
+}
+.link:hover::after{
+    width: 60%;
+    visibility: visible;
+    transform: translateX(5%);
 }
 
 .socialIcon{
@@ -60,6 +79,16 @@ nav{
 }
 .insta{
     color: orange;
+}
+@media(max-width: 1500px){
+	header{
+		width: 80vw;
+	}
+}
+@media(max-width:1200px){
+	header{
+		width: 90vw;
+	}
 }
 @media(max-width: 1000px){
     nav{

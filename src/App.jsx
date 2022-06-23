@@ -6,12 +6,13 @@ import Technologies from './components/technologies/Technologies'
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
 import { BsArrowUpCircleFill } from 'react-icons/bs'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import React, { useRef } from 'react'
 
 function App() {
 
     const upRef = useRef()
-  
     const upHandler = () =>{
       if(document.body.scroll > 20 || document.documentElement.scrollTop > 20) {
         const span = upRef.current
@@ -25,6 +26,7 @@ function App() {
 
     return (
     <div className="Portfolio">
+        <ToastContainer />
       <Header />
       <Hero />
       <Projects />

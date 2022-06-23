@@ -2,10 +2,10 @@ import React, { useRef } from 'react'
 import './Header.css'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { CgClose } from 'react-icons/cg'
-import Navball from '../images/icons/navBall.svg'
 import Facebook from '../images/icons/facebook.svg'
 import Github from '../images/icons/github.svg'
 import Linkedin from '../images/icons/linkedin.svg'
+import Replit from '../images/icons/replit.svg'
 
 export default function Header() {
   const navRef = useRef()
@@ -13,12 +13,6 @@ export default function Header() {
   const navHandler = () => {
     navRef.current.classList.toggle('mediaNav')
   }
-
-  let fbStyle = { color: '#699BF7' }
-  let instaStyle = { color: '#9313EA' }
-  let linkedinStyle = { color: '#0E72A3' }
-  let githubStyle = { color: '#171515' }
-
   return (
     <header id="home">
       <div className="logo">
@@ -31,9 +25,10 @@ export default function Header() {
         <a href="#contact"><li className="link">Contact</li></a>
         <CgClose className='mediaIcons closeIcon' onClick={navHandler}/>
         <div className="social">
-        <a href="#"><img src={Facebook} alt="Facebook icon" className='socialIcon' /></a>
-        <a href="#"><img src={Github} alt="Facebook icon" className='socialIcon' /></a>
-        <a href='#'><img src={Linkedin} alt="Facebook icon" className='socialIcon' /></a>
+        <a href="https://www.facebook.com/sebik.yah"><img src={Facebook} alt="Facebook icon" className='socialIcon' /></a>
+        <a href="https://github.com/zerK4"><img src={Github} alt="Github icon" className='socialIcon' /></a>
+        <a href="https://replit.com/@SebastianPavel1"><img src={Replit} alt="Replit icon" className='socialIcon' /></a>
+        <a href='https://www.linkedin.com/in/sebastian-pavel-0851a719b/'><img src={Linkedin} alt="Linkedin icon" className='socialIcon' /></a>
       </div>
       </nav>
       <HiMenuAlt1 className='mediaIcons menuIcon' onClick={navHandler}/>
